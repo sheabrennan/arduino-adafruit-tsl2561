@@ -32,7 +32,7 @@ let Adafruit_TSL2561 = {
 
     _create: ffi('void *mgos_tsl2561_create(int)'),
     _bgn: ffi('int mgos_tsl2561_begin(void *)'),
-    _enable: ffi('int mgos_tsl2561_enable(void *)'),
+    _enable: ffi('void mgos_tsl2561_enable(void *)'),
     _gLum: ffi('int mgos_tsl2561_getLuminosity(void *, int)'),
     _gFLm: ffi('int mgos_tsl2561_getFullLuminosity(void *)'),
     _sInT: ffi('void mgos_tsl2561_setIntegrationTime(void *, int)'),
