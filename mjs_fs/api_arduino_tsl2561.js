@@ -33,6 +33,7 @@ let Adafruit_TSL2561 = {
     _create: ffi('void *mgos_tsl2561_create(int)'),
     _bgn: ffi('int mgos_tsl2561_begin(void *)'),
     _enable: ffi('void mgos_tsl2561_enable(void *)'),
+    _disable: ffi('void mgos_tsl2561_disable(void *)'),
     _gLum: ffi('int mgos_tsl2561_getLuminosity(void *, int)'),
     _gFLm: ffi('int mgos_tsl2561_getFullLuminosity(void *)'),
     _sInT: ffi('void mgos_tsl2561_setIntegrationTime(void *, int)'),
@@ -49,6 +50,9 @@ let Adafruit_TSL2561 = {
         },
         enable: function() {
             return Adafruit_TSL2561._enable(this.tsl);
+        },
+        disable: function() {
+            return Adafruit_TSL2561._disable(this.tsl);
         },
         // ## **`myTSL.getLuminosity( lumo )`**
         // Return the current luminosity for either channel or both.
